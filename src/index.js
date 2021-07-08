@@ -1,5 +1,5 @@
 import loadDashboard from './pages/dashboard/loaddashboard';
-import loadQuickDO from './pages/quickdo/loadquick';
+import loadQuickDO from './pages/quickdo/loadquickpage';
 import loadProjects from './pages/projects/loadprojects';
 import "./style/style.scss";
 
