@@ -1,0 +1,11 @@
+@import './utility/variables';
+@import './utility/mixin';
+
+header{
+    @include flexCenter(center,center);
+    height: 10vh;
+    font-size: $titleSize;
+    font-weight: bold;
+    color: $secondaryC;
+    border-bottom: 2px solid $accentC;
+}

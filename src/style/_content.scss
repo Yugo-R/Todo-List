@@ -1,0 +1,8 @@
+@import './quickDo';
+
+.content{
+    @include flexCenter(center,start);
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}

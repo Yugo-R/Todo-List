@@ -1,0 +1,60 @@
+@import './utility/variables';
+@import './utility/mixin';
+@import './header';
+@import './content';
+@import './navbar';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: $primaryC;
+}
+
+.modal{
+    position: fixed;
+    height: 300px;
+    width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    padding: 5px;
+    background-color: rosybrown;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    div{
+        width: 100%;
+        input{
+            width:95%;
+            height: 1.5rem;
+        }
+        select{
+            width: 96%;
+            height: 1.5rem;
+        }
+    }
+    #taskDescription{
+        resize: none;
+        padding: 5px;
+        width: 95%;
+    }
+
+    #submit-button{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        button{
+            height: 30px;
+            width: 50px;
+            font-size: large;
+        }
+    }
+}
+
+.modal.active{
+    transform: translate(-50%,-50%) scale(1);
+}

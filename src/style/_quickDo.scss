@@ -1,0 +1,50 @@
+@import './utility/variables';
+@import './utility/mixin';
+
+#quick-content{
+    margin-top: 1.5rem;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    .quick-title{
+        color: $secondaryC;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    #add-task{
+        width: 100%;
+        border: 2px solid $accentC;
+        outline: none;
+        padding: 0.2rem;
+        background: none;
+        justify-self: center;
+        font-size: 1rem;
+        color: $accentC;
+        cursor: pointer;
+    }
+    .task{
+        display: grid;
+        grid-template-columns: 1fr 3fr 2fr 1.5fr;
+        align-items: center;
+        border-radius: 5px;
+        height: 40px;
+        width: 100%;
+        background-color:$secondaryC;
+
+        #task-title{
+            justify-self: center;
+        }
+        .task-action{
+            display: flex;
+            justify-content: space-around;
+        }
+        .task-btn{
+            width: fit-content;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}

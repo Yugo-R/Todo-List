@@ -1,0 +1,25 @@
+@import './utility/mixin';
+@import './utility/variables';
+
+.navbar{
+    @include flexCenter(space-around,center);
+    position: fixed;
+    bottom: 0;
+    height: 10vh;
+    width: 100%;
+    background-color: $secondaryC;
+
+    button{
+        border: none;
+        background: none;
+        color: $primaryC;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    
+    .active{
+        color: white;
+    }
+    
+}

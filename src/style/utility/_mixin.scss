@@ -1,0 +1,5 @@
+@mixin flexCenter($separation, $yAxis) {
+    display: flex;
+    justify-content: $separation;
+    align-items: $yAxis;
+}
