@@ -27,6 +27,7 @@
         display: grid;
         grid-template-columns: 1fr 3fr 2fr 1.5fr;
         align-items: center;
+        border: 2px solid;
         border-radius: 5px;
         height: 40px;
         width: 100%;
@@ -45,6 +46,9 @@
             border: none;
             cursor: pointer;
             outline: none;
+            svg{
+                pointer-events: none;
+            }
         }
     }
 }

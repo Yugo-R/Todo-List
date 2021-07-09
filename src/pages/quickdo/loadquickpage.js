@@ -30,8 +30,17 @@ export default function loadQuickDO(content){
                     modal.resetForm();
                 };
                 break;
-            default:
-                break;
+            case 'delete-task':
+                document.querySelector(`#${e.target.dataset.parentDiv}`).remove();
         }
     });
+
+    // content.addEventListener('click', (e)=>{
+    //     let contentBtn = e.target.id;
+    //     switch(contentBtn){
+    //         case 'delete-task':
+    //             alert("it's fucking workign bitch!");
+    //         break;
+    //     }
+    // })
 }
