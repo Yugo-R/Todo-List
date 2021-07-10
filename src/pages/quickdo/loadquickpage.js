@@ -34,6 +34,10 @@ export default function loadQuickDO(content){
                 modal.removeTask(e.target.dataset.parentDiv);
                 document.querySelector(`#${e.target.dataset.parentDiv}`).remove();
                 break;
+            case 'theOverlay':
+                modal.close();
+                modal.resetForm();
+                break;
         }
     });
 

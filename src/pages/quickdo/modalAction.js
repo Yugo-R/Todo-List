@@ -1,13 +1,20 @@
 export let modalAction = ()=>{
     let modal = document.querySelector('.modal');
+    let overlay = document.querySelector('.overlay');
     let title = modal.querySelector('#taskTitle');
     let date = modal.querySelector('#taskDate');
     let priority = modal.querySelector('#priority');
     let description = modal.querySelector('#taskDescription');
 
     return {
-        open: () => modal.classList.add('active'),
-        close: () => modal.classList.remove('active'),
+        open: () => {
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        },
+        close: () => {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        },
         validateForm: ()=>{
             if(!title.value){
                 title.focus();
