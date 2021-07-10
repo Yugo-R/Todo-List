@@ -22,7 +22,7 @@ export let modalAction = ()=>{
         },
         saveTask: ()=>{
             let obj = {
-                title: title.value,
+                title: title.value.split(" ").join(''),
                 date: date.value,
                 priority: priority.value,
                 description: description.value
@@ -31,10 +31,14 @@ export let modalAction = ()=>{
             localStorage.setItem(obj['title'], JSON.stringify(obj));
             console.log(localStorage);
         },
+        removeTask: (taskId)=>{
+            localStorage.removeItem(taskId)
+            console.log(localStorage);
+        },
         displayNewtask: ()=>{
             let task = document.createElement('div');
             task.className = 'task';
-            task.id = `${title.value.split(" ").join('')}-task`;
+            task.id = `${title.value.split(" ").join('')}`;
             
             let checkbox = document.createElement('input');
             checkbox.type = 'checkbox';

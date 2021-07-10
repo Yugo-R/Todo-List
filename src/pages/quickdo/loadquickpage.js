@@ -31,7 +31,9 @@ export default function loadQuickDO(content){
                 };
                 break;
             case 'delete-task':
+                modal.removeTask(e.target.dataset.parentDiv);
                 document.querySelector(`#${e.target.dataset.parentDiv}`).remove();
+                break;
         }
     });
 
